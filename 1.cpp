@@ -3,9 +3,6 @@
 using namespace std;
 
 int main(){
-    int n = 10;
-    for(int i = 0; i < n; i++)
-    {
-        cout<<i<<" ";
-    }
+    int n = 6 & 1;
+    cout<<n;
 }
