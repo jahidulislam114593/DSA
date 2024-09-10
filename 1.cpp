@@ -3,6 +3,8 @@
 using namespace std;
 
 int main(){
-    int n = 6 & 1;
-    cout<<n;
+    int x, y;
+    cin>>x>>y;
+    cout<<x+y<<endl;
+
 }
