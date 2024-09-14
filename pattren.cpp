@@ -120,10 +120,25 @@ void pattern8(int n){
 	}
 }
 
+void pattern9(int n){
+	pattern7(n);
+	pattern8(n);
+}
+
+void pattern10(int n){
+	for(int i = 1; i <= 2*n-1; i++){
+		int start = i;
+		if(i > n) start = 2*n-i;
+		for(int j = 1; j <= start; j++){
+			cout<<"*";
+		}cout<<endl;
+	}
+}
+
 int main()
 {
 	int n; cin>>n;
 	
-	pattern8(n);
+	pattern10(n);
 
 }
