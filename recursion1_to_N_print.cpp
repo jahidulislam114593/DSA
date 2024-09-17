@@ -1,11 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//print "name" N times using recursion
 void rec(int i, int n)
 {
 	if(i>n) return;
-	cout<<"jahid "<<endl;
+	cout<<i<<" ";
 	rec(i+1, n);
 }
 
