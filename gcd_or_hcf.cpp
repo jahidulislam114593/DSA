@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Jahidul Islam return 0
 // Approach 1: Iterating from 1 to min(n1, n2)
 int gcdApproach1(int n1, int n2) {
     int gcd = 1;
