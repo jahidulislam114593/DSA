@@ -1,23 +1,21 @@
 #include<bits/stdc++.h>
- 
 using namespace std;
 
-int main(){
-    int n; cin>>n;
-    vector<int>v(n);
-    for(int &i: v) cin>>i;
+int main()
+{
+    int staff; cin>>staff;
+    int rooms; cin>>rooms;
+    int inc = staff;
 
-    sort(v.begin(), v.end());
-    for(int i : v) cout<<i<<" ";
-        cout<<endl;
-    int sing = 0;
-    for(int i = 1; i<v.size();i+=2)
-    {  
-        if(v[i] != v[i-1]){
-            sing = v[i-1];
+    for(int i = 1; i<= staff; i++)
+    {
+        cout<<i<<": ";
+        for(int j = i; j <= rooms; j = j + inc)
+        {
+            cout<<j;
+            if( j + inc <= rooms) cout<<",";
         }
+        cout<<endl;
     }
-    cout<<sing<<endl;
-
-
+return 0;
 }
