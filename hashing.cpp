@@ -8,6 +8,10 @@ int main()
 	for(int i = 0;i < n; i++) cin>>arr[i];
 
 	//Hashing 
+	//depanding on your problem array size 
+	// you declare hash if 10^5 ->100001
+	//10^6 ->1000001
+
 	int hash[13] = {0};
 	for(int i = 0; i<n; i++)
 	{
