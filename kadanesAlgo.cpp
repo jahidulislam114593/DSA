@@ -15,11 +15,12 @@ int kadanesAlgo(vector<int> &arr, int n)
 }
 
 void subArray(vector<int> &arr){
-	for(int i = 0; i<arr.size();i++)
+	int n = arr.size();
+	for(int i = 0; i<n;i++)
 	{
-		for(int j = i; j<arr.size(); j++)
+		for(int j = i; j<n; j++)
 		{
-			for(int k = i; k<j; k++){
+			for(int k = i; k<=j; k++){
 				cout<<arr[k]<<" ";
 			}cout<<endl;
 		}
@@ -31,6 +32,6 @@ int main()
 	int n; cin>>n;
 	vector<int> arr(n);
 	for(int &val : arr) cin>>val;
-	cout<<kadanesAlgo(arr, n)<<endl;
-	// subArray(arr);
+	// cout<<kadanesAlgo(arr, n)<<endl;
+	subArray(arr);
 }
