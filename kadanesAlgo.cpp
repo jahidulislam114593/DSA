@@ -14,10 +14,23 @@ int kadanesAlgo(vector<int> &arr, int n)
 	return maxSum;
 }
 
+void subArray(vector<int> &arr){
+	for(int i = 0; i<arr.size();i++)
+	{
+		for(int j = i; j<arr.size(); j++)
+		{
+			for(int k = i; k<j; k++){
+				cout<<arr[k]<<" ";
+			}cout<<endl;
+		}
+	}
+}
+
 int main()
 {
 	int n; cin>>n;
 	vector<int> arr(n);
 	for(int &val : arr) cin>>val;
 	cout<<kadanesAlgo(arr, n)<<endl;
+	// subArray(arr);
 }
