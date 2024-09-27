@@ -3,26 +3,30 @@ using namespace std;
 
 int main()
 {
-	//n^x
-	// int n; cin>>n;
+	//BruteForce
 	// int x; cin>>x;
+	// int n; cin>>n;
+
 	// int ans = 1;
-	// for(int i = 1; i <= x; i++) ans *= n ;
+	// for(int i = 0; i<n; i++)
+	// {
+	// 	ans *= x;
+	// }
 	// cout<<ans<<endl;
 
-	int n; cin>>n;
-	int x; cin>>x;
-	int binaryForm = x;
-	int ans = 1; 
 
-	while(binaryForm > 0)
+    // Binary Exponentiation
+	int x, n; cin>>x>>n;
+	int b = n, ans = 1; 
+
+	while(b > 0)
 	{
-		if(binaryForm % 2 == 1)
+		if(b & 1)
 		{
-			ans *= n;
+			ans *= x;
 		}
-		n *= n;
-		binaryForm /= 2;
+		x *= x;
+		b /= 2;
 	}
 	cout<<ans<<endl;
 }
