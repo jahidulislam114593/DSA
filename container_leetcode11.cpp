@@ -14,8 +14,8 @@ int main()
 		for(int right = left+1; right<n; right++)
 		{
 			int width = right - left;
-			int x = min(arr[right], arr[left]);
-			area = x * width;
+			int height = min(arr[right], arr[left]);
+			area = height * width;
 			mx_area = max(mx_area, area);
 		}
 		
