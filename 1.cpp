@@ -1,20 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-
 int main()
 {
-    int n; cin>>n; // -5
+    //Brute Force TC-> O(n2)
+    vector<int>arr = {1, 2, 3, 4};
+    int n = arr.size();
+    vector<int>ans;
+    int product = 1;
+    for(auto i: arr) product *= i;
 
-    while(n!=0){ // -5!=0
-    for(int i=0; i<n; i++){ 
+    for(int i = 0; i<n; i++)
+        ans.push_back(product/arr[i]);
 
-       cout<<"hi";
-
-    }cout<<endl;
-    
-        n--;
-    }
-return 0;
+    for(auto x: ans) cout<<x<<" ";
+    cout<<endl;
 }
