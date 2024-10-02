@@ -6,8 +6,8 @@ int main()
 	int a = 45;
 	int* ptr = &a;
 
-	cout<<ptr<<endl;
-	cout<<&a<<endl;
+	int** parPtr = &ptr;
 
-	cout<<&ptr<<endl;
+	cout<< &ptr<<endl;
+	cout<<parPtr<<endl;
 }
