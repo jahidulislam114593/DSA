@@ -3,15 +3,13 @@ using namespace std;
 
 int main()
 {
-	//pointer
-	int a = 45;
-	int* ptr = &a;
+	int a = 5;
+	int* p = &a;
+	int** q = &p;
 
-	//pointer to pointer 
-	int** parPtr = &ptr;
-
-	//dereferance operator
-	cout<<*(&a)<<endl;
-	cout<<*(ptr)<<endl;
+	cout<<*p<<endl; // 5
+	cout<<**q<<endl; // 5
+	cout<<p<<endl; // address of a
+	cout<<*q<<endl; // value of q
 
 }
