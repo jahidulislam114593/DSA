@@ -2,6 +2,8 @@
 using namespace std;
 
 int binarySearch(vector<int>& nums, int target) {
+
+    // logn
     int left = 0;
     int right = nums.size() - 1;
 
