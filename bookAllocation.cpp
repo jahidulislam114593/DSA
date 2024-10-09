@@ -45,7 +45,7 @@ int allocateBooks(vector<int>&arr, int n, int m)
 	return ans;
 }
 
-
+//Book Allocation imp problem for BS
 int main()
 {
 	vector<int> arr = {10, 20, 30, 40};
