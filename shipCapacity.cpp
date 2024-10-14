@@ -31,7 +31,7 @@ int main()
 	int ans = 0;
 	while(st <= end)
 	{
-		int mid  = st + (end - st);
+		int mid  = st + (end - st) / 2;
 		if(isPossible(arr, n, days, mid))
 		{
 			ans = mid;
