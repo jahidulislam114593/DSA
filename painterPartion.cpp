@@ -20,9 +20,9 @@ bool isPossible(vector<int>&nums, int n, int m, int mid)
 
 int main()
 {
-	vector<int> nums = {1, 2, 3, 4, 5};
+	vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	int n= nums.size();
-	int m = 2;
+	int m = 5;
 
 	int st = *max_element(nums.begin(), nums.end());
 	int sum = 0;
