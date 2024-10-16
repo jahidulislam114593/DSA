@@ -19,26 +19,33 @@ bool isPossible(vector<int>&arr, int n, int cows, int mid)
 
 int main()
 {
-	vector<int>arr = {1, 2, 8, 4, 9};
-	int n = arr.size();
-	int cows = 3;
-	sort(arr.begin(), arr.end());
-
-	int st = 1;
-	int end = arr[n-1] - arr[0];
-
-	int ans = 0;
-	while(st <= end)
+	int t; cin>>t;
+	while(t--)
 	{
-		int mid = st + (end - st) / 2;
-		if(isPossible(arr, n, cows, mid))
+		int n, cows; 
+		cin>>n>>cows;
+
+		vector<int>arr(n);
+		for(int i = 0; i<n; i++) cin>>arr[i];
+		sort(arr.begin(), arr.end());
+		
+		int st = 1;
+		int end = arr[n-1] - arr[0];
+
+		int ans = 0;
+		while(st <= end)
 		{
-			ans = mid;
-			st = mid + 1;
-		}else
-		{
-			end = mid - 1;
+			int mid = st + (end - st) / 2;
+			if(isPossible(arr, n, cows, mid))
+			{
+				ans = mid;
+				st = mid + 1;
+			}else
+			{
+				end = mid - 1;
+			}
 		}
+		cout<<ans<<endl;
 	}
-	cout<<ans<<endl;
+
 }	
