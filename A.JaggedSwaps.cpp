@@ -6,6 +6,16 @@ using namespace std;
 #define pb                    push_back
 #define return_loser          return 0;
  
+void solve()
+{
+	int n; cin>>n;
+	int arr[n];
+	for(int i = 0; i<n; ++i) cin>>arr[i];
+	if(arr[0] == 1) cout<<"YES"<<endl;	
+	else cout<<"NO"<<endl;
+}
+
+
 int main()
 {
     ios_base::sync_with_stdio(0); cin.tie(0);
@@ -13,16 +23,7 @@ int main()
     int t; cin>>t;
     while(t--)
     {
-        int n; cin>>n;
-        if(n % 3)
-        {
-            cout<<"First\n";
-        }else
-        {
-            cout<<"Second\n";
-        }
-
-                 
+		solve(); 		
     }
  
     return_loser;
