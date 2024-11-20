@@ -9,32 +9,31 @@ using namespace std;
 
 const int N=1e5+10;
 
+int countPair(vector<int>& a)
+{
+	map<int,int>mp;
+	int score = 0;
+
+	for(int num: a)
+	{
+		mp[num]++;
+	}
+
+	for(auto& entry: mp)
+	{
+		score += entry.second / 2;
+	}
+	return score;
+}
+
 void solve()
 {
-    int n; cin>>n;
-    int matrix[n][n];
 
-    for(int i = 0; i<n; ++i)
-    {
-        for(int j = 0; j<n; ++j)
-        {
-            cin>>matrix[i][j];
-        }
-    }
+	int n; cin>>n;
+	vector<int>a(n);
+	for(int i = 0; i<n; ++i) cin>>a[i];
 
-    //linear search in 2d matrix;
-    int key = 23;
-
-    for(int i = 0; i<n; ++i)
-    {
-        for(int j = 0; j<n; ++j)
-        {
-            if(matrix[i][j] == key)
-            {
-                cout<<i<<" "<<j;
-            }
-        }
-    }
+	cout<<countPair(a)<<endl;
 
 }
 

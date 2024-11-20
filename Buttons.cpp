@@ -11,30 +11,12 @@ const int N=1e5+10;
 
 void solve()
 {
-    int n; cin>>n;
-    int matrix[n][n];
+	int a, b, c; cin>>a>>b>>c;
 
-    for(int i = 0; i<n; ++i)
-    {
-        for(int j = 0; j<n; ++j)
-        {
-            cin>>matrix[i][j];
-        }
-    }
-
-    //linear search in 2d matrix;
-    int key = 23;
-
-    for(int i = 0; i<n; ++i)
-    {
-        for(int j = 0; j<n; ++j)
-        {
-            if(matrix[i][j] == key)
-            {
-                cout<<i<<" "<<j;
-            }
-        }
-    }
+	if(c % 2 == 0)
+		cout<<( a > b ? "First\n":"Second\n");
+	else
+		cout<<( b > a ? "Second\n":"First\n");
 
 }
 

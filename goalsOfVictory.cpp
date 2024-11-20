@@ -11,31 +11,17 @@ const int N=1e5+10;
 
 void solve()
 {
-    int n; cin>>n;
-    int matrix[n][n];
+	int n; cin>>n;
+	int sum = 0;
 
-    for(int i = 0; i<n; ++i)
-    {
-        for(int j = 0; j<n; ++j)
-        {
-            cin>>matrix[i][j];
-        }
-    }
+	for(int i=0; i<n-1; ++i)
+	{
+		int x; cin>>x;
 
-    //linear search in 2d matrix;
-    int key = 23;
+		sum += x;
+	}
 
-    for(int i = 0; i<n; ++i)
-    {
-        for(int j = 0; j<n; ++j)
-        {
-            if(matrix[i][j] == key)
-            {
-                cout<<i<<" "<<j;
-            }
-        }
-    }
-
+	cout<<-sum<<endl;
 }
 
 

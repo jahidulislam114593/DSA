@@ -23,7 +23,7 @@ void solve()
     }
 
     //linear search in 2d matrix;
-    int key = 23;
+    int key = 2;
 
     for(int i = 0; i<n; ++i)
     {
@@ -35,7 +35,21 @@ void solve()
             }
         }
     }
+    cout<<'\n';
 
+    //maximum row sum
+    int sum = 0;
+    int maxSum = INT_MIN;
+    for(int i = 0; i<n; ++i)
+    {
+        for(int j = 0; j<n; ++j)
+        {
+            sum+=matrix[i][j];
+        }
+        maxSum = max(maxSum, sum);
+        sum = 0;
+    }
+    cout<<maxSum<<'\n';
 }
 
 
