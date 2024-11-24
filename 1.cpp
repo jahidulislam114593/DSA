@@ -9,33 +9,36 @@ using namespace std;
 
 const int N=1e5+10;
 
-void solve()
+int rowSum(int mat[][3], int row, int col)
 {
-    int n; cin>>n;
-    int matrix[n][n];
-
-    for(int i = 0; i<n; ++i)
+    int maxRowSum = INT_MIN;
+    for(int i = 0; i<row; ++i)
     {
-        for(int j = 0; j<n; ++j)
+        int sum = 0;
+        for(int j = 0; j<col; ++j)
         {
-            cin>>matrix[i][j];
+            sum += mat[i][j];
         }
+        maxRowSum = max(maxRowSum, sum);
     }
 
-    //linear search in 2d matrix;
-    int key = 23;
+    return maxRowSum;
+}
 
-    for(int i = 0; i<n; ++i)
+int colSum(int mat[][3], int row, int col)
+{
+    int maxColSum = INT_MIN;
+    for(int i = 0; i<col; ++i)
     {
-        for(int j = 0; j<n; ++j)
+        int sum = 0;
+        for(int j = 0; j<row; ++j)
         {
-            if(matrix[i][j] == key)
-            {
-                cout<<i<<" "<<j;
-            }
+            sum += mat[j][i];
         }
+        maxColSum = max(maxColSum, sum);
     }
 
+    return maxColSum;
 }
 
 
@@ -43,7 +46,20 @@ int main()
 {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    int t; cin>>t;
-    while(t--) solve();
+    int mat[3][3];
+    int row = 3;
+    int col = 3;
+
+    for(int i = 0; i<row; ++i)
+    {
+        for(int j = 0; j<col; ++j)
+        {
+            cin>>mat[i][j];
+        }
+    }
+
+    cout<<rowSum(mat, row, col)<<endl;
+    cout<<colSum(mat, row, col)<<endl;
+
     return_loser;
 }
